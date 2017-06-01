@@ -1,6 +1,6 @@
 <?php
 require_once('database.php');
-
+//testing
 // Get category ID
 $home_type = filter_input(INPUT_GET, 'home_type');
 
