@@ -1,6 +1,5 @@
 <?php
-
-    $dsn = 'mysql:host=localhost;dbname=chapter_4_homework';
+    $dsn = 'mysql:host=localhost;dbname=home_listings';
     $username = 'root';
     //$password = 'pa55word';
 
@@ -8,7 +7,7 @@
         $db = new PDO($dsn, $username);
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
-        include('database_error.php');
+        include('../errors/database_error.php');
         exit();
     }
 ?>
