@@ -22,7 +22,10 @@ if ($action == 'list_homes')
         $type_id = 1;
     }
     $type_name = get_type_name($type_id);
-    $home_type = get_home_type();
+
+    //kew: changed
+    $home_types = get_home_type();
+
     $homes = get_homes_by_type($type_id);
     include('home_list.php');
 } else if ($action == 'delete_home')
@@ -55,7 +58,10 @@ if ($action == 'list_homes')
         $error = "Invalid product data. Check all fields and try again.";
         include('../errors/error.php');
     } else {
-        add_product($type_id, $list_id, $list_street, $list_city, $list_state, $list_zip);
+        //KEW : you do not have a function called add product
+        //add_product($type_id, $list_id, $list_street, $list_city, $list_state, $list_zip);
+        //your function is called add home
+        add_home($type_id, $list_id, $list_street, $list_city, $list_state, $list_zip);
         header("Location: .?category_id=$type_id");
     }
 }
